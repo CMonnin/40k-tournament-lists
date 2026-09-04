@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>GPI_1 — Army Lists</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg0:#282828;--bg0h:#1d2021;--bg1:#3c3836;--bg2:#504945;--bg3:#665c54;--bg4:#7c6f64;
+  --fg0:#ebdbb2;--fg1:#d5c4a1;--fg2:#bdae93;--fg3:#a89984;
+  --red:#fb4934;--green:#b8bb26;--yellow:#fabd2f;--blue:#83a598;
+  --purple:#d3869b;--aqua:#8ec07c;--orange:#fe8019;
+  --accent:#fe8019;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:var(--bg0);color:var(--fg1);font-size:15px;line-height:1.5;
+  padding:0 12px 48px;
+}
+.wrap{max-width:720px;margin:0 auto}
+
+.hdr{padding:18px 4px 14px;border-bottom:1px solid var(--bg1);margin-bottom:14px}
+.hdr h1{font-size:15px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent)}
+.hdr .sub{font-size:12px;color:var(--fg3);margin-top:3px}
+
+.card{
+  background:var(--bg0h);border:1px solid var(--bg1);border-radius:5px;
+  margin-bottom:8px;overflow:hidden;
+}
+.card.open{border-color:var(--bg3)}
+.card.empty{opacity:.45}
+
+.chd{
+  width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;
+  padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;
+  -webkit-tap-highlight-color:transparent;
+}
+.card.empty .chd{cursor:default}
+.chd:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.who{min-width:0;flex:1}
+.name{font-size:15px;font-weight:600;color:var(--fg0);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.empty .name{color:var(--fg2)}
+.tags{font-size:12.5px;color:var(--fg3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tags .fac{color:var(--yellow)}
+.tags .det{color:var(--aqua)}
+.tags .sep{color:var(--bg4);margin:0 6px}
+.tags .none{color:var(--fg3);font-style:italic}
+
+.chev{flex-shrink:0;color:var(--bg4);font-size:12px;transition:transform .15s}
+.card.open .chev{transform:rotate(90deg);color:var(--accent)}
+.card.empty .chev{visibility:hidden}
+
+.body{display:none;border-top:1px solid var(--bg1);padding:12px 14px 14px}
+.card.open .body{display:block}
+.body pre{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace;
+  font-size:12.5px;line-height:1.55;color:var(--fg1);
+  white-space:pre-wrap;overflow-wrap:break-word;
+}
+
+.status{padding:0 14px 12px;font-size:12.5px;color:var(--fg3);font-style:italic}
+
+.msg{padding:24px 4px;color:var(--fg3);font-size:13.5px}
+.msg.err{color:var(--red);font-style:normal}
+
+.ftr{margin-top:22px;padding-top:12px;border-top:1px solid var(--bg1);font-size:11.5px;color:var(--bg4)}
+.ftr a{color:var(--fg3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <h1 id="ev-name">…</h1>
+    <div class="sub" id="ev-sub"></div>
+  </div>
+  <div id="out"><div class="msg">Loading lists…</div></div>
+  <div class="ftr" id="ftr"></div>
+</div>
+
+<script>
+// ---- Which event is showing at the root URL. Change these two lines to switch events. ----
+const CURRENT_EVENT = { slug: 'gpi-1', name: 'GPI_1', date: 'Sunday 6 September 2026' };
+const PAST_EVENTS   = []; // e.g. [{ slug:'gpi-1', name:'GPI_1' }]
+// -----------------------------------------------------------------------------------------
+
+const out = document.getElementById('out');
+
+function esc(s){
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Splits "Player:/Faction:/Detachment:" header lines off the raw paste below them.
+function parseList(raw){
+  const meta = { player:'', faction:'', detachment:'' };
+  const lines = raw.replace(/\r\n?/g, '\n').split('\n');
+  let i = 0;
+  for (; i < lines.length; i++){
+    const m = lines[i].match(/^\s*(Player|Faction|Detachment)\s*:\s*(.*)$/i);
+    if (!m) break;
+    meta[m[1].toLowerCase()] = m[2].trim();
+  }
+  const body = lines.slice(i).join('\n').trim();
+  return { ...meta, body };
+}
+
+function tagsHtml(l){
+  const fac = l.faction && !/^[-—]?$/.test(l.faction) ? l.faction : '';
+  const det = l.detachment && !/^[-—]?$/.test(l.detachment) ? l.detachment : '';
+  if (!fac && !det) return '<span class="none">faction TBC</span>';
+  if (!det) return '<span class="fac">' + esc(fac) + '</span>';
+  if (!fac) return '<span class="det">' + esc(det) + '</span>';
+  return '<span class="fac">' + esc(fac) + '</span><span class="sep">/</span><span class="det">' + esc(det) + '</span>';
+}
+
+function render(lists){
+  document.getElementById('ev-name').textContent = CURRENT_EVENT.name;
+  const submitted = lists.filter(l => l.body).length;
+  document.getElementById('ev-sub').textContent =
+    CURRENT_EVENT.date + ' · ' + submitted + ' of ' + lists.length + ' lists submitted';
+
+  lists.sort((a,b) => a.player.localeCompare(b.player, undefined, {numeric:true}));
+
+  out.innerHTML = lists.map((l, idx) => {
+    const has = !!l.body;
+    return '<div class="card' + (has ? '' : ' empty') + '" id="c' + idx + '">' +
+      '<button class="chd" type="button" data-i="' + idx + '"' + (has ? '' : ' disabled') + '>' +
+        '<span class="who">' +
+          '<span class="name">' + esc(l.player || l.file) + '</span>' +
+          '<span class="tags">' + tagsHtml(l) + '</span>' +
+        '</span>' +
+        '<span class="chev">&#9656;</span>' +
+      '</button>' +
+      (has
+        ? '<div class="body"><pre>' + esc(l.body) + '</pre></div>'
+        : '<div class="status">List not submitted</div>') +
+    '</div>';
+  }).join('');
+
+  out.querySelectorAll('.chd').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('c' + btn.dataset.i).classList.toggle('open');
+    });
+  });
+
+  if (PAST_EVENTS.length){
+    document.getElementById('ftr').innerHTML = 'Past events: ' + PAST_EVENTS
+      .map(e => '<a href="events/' + e.slug + '/">' + esc(e.name) + '</a>').join(' · ');
+  }
+}
+
+// Fetch the manifest, then every list up front (~50KB) so expanding a card is
+// instant and still works if the venue wifi drops after the page has loaded.
+(async () => {
+  const base = 'events/' + CURRENT_EVENT.slug + '/';
+  try {
+    const res = await fetch(base + 'manifest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('manifest.json returned ' + res.status);
+    const files = await res.json();
+
+    const lists = await Promise.all(files.map(async file => {
+      const r = await fetch(base + 'lists/' + file, { cache: 'no-store' });
+      if (!r.ok) return { file, player: file.replace(/\.txt$/,''), faction:'', detachment:'', body:'' };
+      return { file, ...parseList(await r.text()) };
+    }));
+
+    render(lists);
+  } catch (e) {
+    out.innerHTML = '<div class="msg err">Could not load lists: ' + esc(e.message) + '</div>';
+  }
+})();
+</script>
+</body>
+</html>
