@@ -86,6 +86,12 @@ const CURRENT_EVENT = { slug: 'gpi-1', name: 'GPI_1', date: 'Sunday 6 September 
 const PAST_EVENTS   = []; // e.g. [{ slug:'gpi-1', name:'GPI_1' }]
 // -----------------------------------------------------------------------------------------
 
+// ?event=<slug> shows an archived event; no query string shows the current one.
+const _req = (new URLSearchParams(location.search).get('event') || '').replace(/[^a-z0-9-]/gi, '');
+const EVENT = !_req || _req === CURRENT_EVENT.slug
+  ? CURRENT_EVENT
+  : (PAST_EVENTS.find(e => e.slug === _req) || { slug:_req, name:_req, date:'' });
+
 const out = document.getElementById('out');
 
 function esc(s){
@@ -116,10 +122,11 @@ function tagsHtml(l){
 }
 
 function render(lists){
-  document.getElementById('ev-name').textContent = CURRENT_EVENT.name;
+  document.title = EVENT.name + ' — Army Lists';
+  document.getElementById('ev-name').textContent = EVENT.name;
   const submitted = lists.filter(l => l.body).length;
-  document.getElementById('ev-sub').textContent =
-    CURRENT_EVENT.date + ' · ' + submitted + ' of ' + lists.length + ' lists submitted';
+  const count = submitted + ' of ' + lists.length + ' lists submitted';
+  document.getElementById('ev-sub').textContent = EVENT.date ? EVENT.date + ' · ' + count : count;
 
   lists.sort((a,b) => a.player.localeCompare(b.player, undefined, {numeric:true}));
 
@@ -145,16 +152,18 @@ function render(lists){
     });
   });
 
-  if (PAST_EVENTS.length){
-    document.getElementById('ftr').innerHTML = 'Past events: ' + PAST_EVENTS
-      .map(e => '<a href="events/' + e.slug + '/">' + esc(e.name) + '</a>').join(' · ');
+  const others = [CURRENT_EVENT, ...PAST_EVENTS].filter(e => e.slug !== EVENT.slug);
+  if (others.length){
+    document.getElementById('ftr').innerHTML = 'Other events: ' + others
+      .map(e => '<a href="?event=' + encodeURIComponent(e.slug) + '">' + esc(e.name) + '</a>')
+      .join(' · ');
   }
 }
 
 // Fetch the manifest, then every list up front (~50KB) so expanding a card is
 // instant and still works if the venue wifi drops after the page has loaded.
 (async () => {
-  const base = 'events/' + CURRENT_EVENT.slug + '/';
+  const base = 'events/' + EVENT.slug + '/';
   try {
     const res = await fetch(base + 'manifest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('manifest.json returned ' + res.status);
