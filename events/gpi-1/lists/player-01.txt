@@ -1,4 +1,98 @@
-Player: Player 1
-Faction: -
-Detachment: -
+Player: Dan
+Faction: Chaos Daemons
+Detachment: Cavalcade of Chaos and Shadow Legion
 
+GP-1  (2,000 Points)
+
+Chaos Daemons
+Cavalcade of Chaos and Shadow Legion (3 Detachment Points)
+Purge the Foe
+Strike Force (2,000 Points)
+
+CHARACTERS
+
+Be’lakor (390 Points)
+  • Warlord
+  • 1x Betraying Shades
+  • 1x The Blade of Shadows
+
+Bloodthirster (350 Points)
+  • 1x Great axe of Khorne
+  • 1x Hellfire breath
+  • Enhancements: Fade to Darkness
+
+Lord of Change (320 Points)
+  • 1x Bolt of Change
+  • 1x Staff of Tzeentch
+
+Rendmaster on Blood Throne (160 Points)
+  • 1x Attendants’ hellblades
+  • 1x Blade of blood
+
+Skullmaster (85 Points)
+  • 1x Blade of blood
+  • 1x Juggernaut’s bladed horn
+
+OTHER DATASHEETS
+
+Bloodcrushers (200 Points)
+  • 1x Bloodhunter
+     ◦ 1x Hellblade
+     ◦ 1x Juggernaut’s bladed horn
+  • 5x Bloodcrusher
+     ◦ 1x Daemonic Icon
+     ◦ 5x Hellblade
+     ◦ 1x Instrument of Chaos
+     ◦ 5x Juggernaut’s bladed horn
+
+Bloodcrushers (200 Points)
+  • 1x Bloodhunter
+     ◦ 1x Hellblade
+     ◦ 1x Juggernaut’s bladed horn
+  • 5x Bloodcrusher
+     ◦ 1x Daemonic Icon
+     ◦ 5x Hellblade
+     ◦ 1x Instrument of Chaos
+     ◦ 5x Juggernaut’s bladed horn
+
+Flesh Hounds (75 Points)
+  • 1x Gore Hound
+     ◦ 1x Burning roar
+     ◦ 1x Collar of Khorne
+     ◦ 1x Gore-drenched fangs
+  • 4x Flesh Hound
+     ◦ 4x Collar of Khorne
+     ◦ 4x Gore-drenched fangs
+
+Flesh Hounds (75 Points)
+  • 1x Gore Hound
+     ◦ 1x Burning roar
+     ◦ 1x Collar of Khorne
+     ◦ 1x Gore-drenched fangs
+  • 4x Flesh Hound
+     ◦ 4x Collar of Khorne
+     ◦ 4x Gore-drenched fangs
+
+ALLIED UNITS
+
+Cultist Firebrand (45 Points)
+  • 1x Balefire pike
+  • 1x Close combat weapon
+
+Cultist Mob (50 Points)
+  • 1x Cultist Champion
+     ◦ 1x Autopistol
+     ◦ 1x Brutal assault weapon
+  • 9x Chaos Cultist
+     ◦ 9x Autopistol
+     ◦ 9x Brutal assault weapon
+
+Cultist Mob (50 Points)
+  • 1x Cultist Champion
+     ◦ 1x Autopistol
+     ◦ 1x Brutal assault weapon
+  • 9x Chaos Cultist
+     ◦ 9x Autopistol
+     ◦ 9x Brutal assault weapon
+
+Exported with App Version: v2.5.0 (1), Data Version: v931
