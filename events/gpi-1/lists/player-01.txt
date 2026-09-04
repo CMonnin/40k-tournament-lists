@@ -1,6 +1,7 @@
 Player: Dan
 Faction: Chaos Daemons
 Detachment: Cavalcade of Chaos and Shadow Legion
+Disposition: Purge the Foe
 
 GP-1  (2,000 Points)
 

@@ -49,6 +49,14 @@ body{
 .tags .sep{color:var(--bg4);margin:0 6px}
 .tags .none{color:var(--fg3);font-style:italic}
 
+.disp{
+  display:inline-block;margin-top:5px;padding:1px 7px;
+  font-size:11px;letter-spacing:.4px;
+  color:var(--purple);border:1px solid var(--purple);border-radius:3px;
+  max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top;
+}
+.card.empty .disp{color:var(--fg3);border-color:var(--bg3)}
+
 .chev{flex-shrink:0;color:var(--bg4);font-size:12px;transition:transform .15s}
 .card.open .chev{transform:rotate(90deg);color:var(--accent)}
 .card.empty .chev{visibility:hidden}
@@ -100,11 +108,11 @@ function esc(s){
 
 // Splits "Player:/Faction:/Detachment:" header lines off the raw paste below them.
 function parseList(raw){
-  const meta = { player:'', faction:'', detachment:'' };
+  const meta = { player:'', faction:'', detachment:'', disposition:'' };
   const lines = raw.replace(/\r\n?/g, '\n').split('\n');
   let i = 0;
   for (; i < lines.length; i++){
-    const m = lines[i].match(/^\s*(Player|Faction|Detachment)\s*:\s*(.*)$/i);
+    const m = lines[i].match(/^\s*(Player|Faction|Detachment|Disposition)\s*:\s*(.*)$/i);
     if (!m) break;
     meta[m[1].toLowerCase()] = m[2].trim();
   }
@@ -112,9 +120,17 @@ function parseList(raw){
   return { ...meta, body };
 }
 
+const filled = v => v && !/^[-—]?$/.test(v.trim());
+
+function dispHtml(l){
+  return filled(l.disposition)
+    ? '<span class="disp">' + esc(l.disposition.trim()) + '</span>'
+    : '';
+}
+
 function tagsHtml(l){
-  const fac = l.faction && !/^[-—]?$/.test(l.faction) ? l.faction : '';
-  const det = l.detachment && !/^[-—]?$/.test(l.detachment) ? l.detachment : '';
+  const fac = filled(l.faction) ? l.faction : '';
+  const det = filled(l.detachment) ? l.detachment : '';
   if (!fac && !det) return '<span class="none">faction TBC</span>';
   if (!det) return '<span class="fac">' + esc(fac) + '</span>';
   if (!fac) return '<span class="det">' + esc(det) + '</span>';
@@ -137,6 +153,7 @@ function render(lists){
         '<span class="who">' +
           '<span class="name">' + esc(l.player || l.file) + '</span>' +
           '<span class="tags">' + tagsHtml(l) + '</span>' +
+          dispHtml(l) +
         '</span>' +
         '<span class="chev">&#9656;</span>' +
       '</button>' +

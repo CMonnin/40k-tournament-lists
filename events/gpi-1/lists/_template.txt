@@ -1,11 +1,12 @@
 Player: Full Name
 Faction: Necrons
 Detachment: Awakened Dynasty
+Disposition: Purge the Foe
 
 <paste the New Recruit plain-text export here, verbatim>
 
 Notes:
   - Keep the three header lines exactly as above, then ONE blank line, then the list.
-  - Faction / Detachment may be "-" until known; the card shows "faction TBC".
+  - Faction / Detachment / Disposition may be "-" until known; the card shows "faction TBC".
   - Leave everything below the blank line empty and the card renders "List not submitted".
   - This file is deliberately NOT in manifest.json, so it never shows as a card.

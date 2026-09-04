@@ -1,4 +1,5 @@
 Player: Player 5
 Faction: -
 Detachment: -
+Disposition: -
 

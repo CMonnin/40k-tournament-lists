@@ -1,4 +1,5 @@
 Player: Player 10
 Faction: -
 Detachment: -
+Disposition: -
 

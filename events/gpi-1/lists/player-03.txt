@@ -1,4 +1,5 @@
 Player: Player 3
 Faction: -
 Detachment: -
+Disposition: -
 
