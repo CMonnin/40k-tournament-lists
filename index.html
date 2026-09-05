@@ -34,23 +34,23 @@ body{
 .card.empty{opacity:.45}
 
 .chd{
-  width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;
-  padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;
+  background:none;border:0;color:inherit;font:inherit;text-align:left;
+  padding:11px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;
   -webkit-tap-highlight-color:transparent;
 }
 .card.empty .chd{cursor:default}
 .chd:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-.who{min-width:0;flex:1}
-.name{font-size:15px;font-weight:600;color:var(--fg0);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who{min-width:0;flex:1;display:block}
+.name{display:block;font-size:15px;font-weight:600;line-height:1.35;color:var(--fg0);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card.empty .name{color:var(--fg2)}
-.tags{font-size:12.5px;color:var(--fg3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tags{display:block;font-size:12.5px;line-height:1.35;color:var(--fg3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tags .fac{color:var(--yellow)}
 .tags .det{color:var(--aqua)}
 .tags .sep{color:var(--bg4);margin:0 6px}
 .tags .none{color:var(--fg3);font-style:italic}
 
 .disp{
-  display:inline-block;margin-top:5px;padding:1px 7px;
+  display:inline-block;margin-top:6px;padding:2px 8px;
   font-size:11px;letter-spacing:.4px;
   color:var(--purple);border:1px solid var(--purple);border-radius:3px;
   max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top;

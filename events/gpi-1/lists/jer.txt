@@ -1,6 +1,6 @@
 Player: Jer
 Faction: Orks
-Detachment: Green Tide, Runt Swarm and Wreckas |
+Detachment: Green Tide, Runt Swarm and Wreckas
 Disposition: 
 
 Brother bear list!
