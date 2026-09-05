@@ -1,5 +1,139 @@
 Player: Cian
-Faction: -
-Detachment: -
-Disposition: -
+Faction: Blood Angels
+Detachment: LAG
+Disposition: Take and Hold
+bad day to be horus 3 (2000 points)
+
+Blood Angels
+Liberator Assault Group (3 Detachment Points)
+Take and Hold
+Strike Force (2000 Point)
+
+
+ATTACHED UNITS
+
+Attached Unit 1
+
+Blood Angels Captain (115 points)
+  • 1x Inferno pistol
+  • 1x Power fist
+  • Enhancement: Rage‑fuelled Warrior
+
+Sternguard Veteran Squad (100 points)
+  • 1x Sternguard Veteran Sergeant
+    • 1x Sternguard Bolt Pistol
+    • 1x Close Combat Weapon
+    • 1x Power Fist and Sternguard Bolt Rifle
+  • 4x Sternguard Veterans
+    • 4x Sternguard Bolt Pistol
+    • 4x Close Combat Weapon
+    • 3x Sternguard Bolt Rifle
+    • 1x Sternguard Heavy Bolter
+
+Attached Unit 2
+
+Librarian In Terminator Armour (85 points)
+  • 1x Force weapon
+  • 1x Smite
+  • 1x Storm bolter
+
+Terminator Assault Squad (320 points)
+  • 1x Assault Terminator Sergeant
+    • 1x Thunder Hammer
+    • 1x Storm Shield
+  • 9x Assault Terminators
+    • 8x Twin Lightning Claws
+    • 1x Thunder Hammer
+    • 1x Storm Shield
+
+Attached Unit 3
+
+Commander Dante (125 points)
+  • 1x Perdition pistol
+  • 1x The axe mortalis
+
+Sanguinary Guard (120 points)
+  • 3x Sanguinary Guard
+    • 1x Sanguinary Banner
+    • 1x Inferno Pistol
+    • 3x Encarmine Spear
+    • 2x Angelus Boltgun
+
+Attached Unit 4
+
+Lemartes (100 points)
+  • 1x Absolvor bolt pistol
+  • 1x The blood crozius
+
+Death Company Marines With Jump Packs (230 points)
+  • 10x Death Company Marines with Jump Packs
+    • 6x Heavy Bolt Pistol
+    • 5x Astartes Chainsword
+    • 2x Plasma Pistol
+    • 2x Eviscerator
+    • 1x Power Fist
+    • 2x Inferno Pistol and Power Fist
+
+
+CHARACTER
+
+Lieutenant With Combi-weapon (95 points)
+  • 1x Combi-weapon
+  • 1x Paired combat blades
+
+
+BATTLELINE
+
+Intercessor Squad (80 points)
+  • 1x Intercessor Sergeant
+    • 1x Bolt Pistol
+    • 1x Plasma Pistol
+    • 1x Power Fist
+  • 4x Intercessors
+    • 4x Bolt Pistol
+    • 3x Bolt Rifle
+    • 4x Close Combat Weapon
+    • 1x Bolt Rifle and Astartes Grenade Launcher
+
+
+OTHER DATASHEETS
+
+Baal Predator (125 points)
+  • 2x Heavy flamers
+  • 1x Armoured tracks
+  • 1x Baal flamestorm cannon
+  • 1x Hunter-killer missile
+  • 1x Storm bolter
+
+Baal Predator (125 points)
+  • 2x Heavy flamers
+  • 1x Armoured tracks
+  • 1x Baal flamestorm cannon
+  • 1x Hunter-killer missile
+  • 1x Storm bolter
+
+Ballistus Dreadnought (150 points)
+  • 1x Armoured feet
+  • 1x Ballistus lascannon
+  • 1x Ballistus missile launcher
+  • 1x Twin storm bolter
+
+Infiltrator Squad (110 points)
+  • 1x Infiltrator Sergeant
+    • 1x Bolt Pistol
+    • 1x Marksman Bolt Carbine
+    • 1x Close Combat Weapon
+  • 4x Infiltrators
+    • 4x Bolt Pistol
+    • 4x Marksman Bolt Carbine
+    • 4x Close Combat Weapon
+    • 1x Infiltrator Comms Array
+    • 1x Helix Gauntlet
+
+Sanguinary Guard (120 points)
+  • 3x Sanguinary Guard
+    • 1x Inferno Pistol
+    • 1x Sanguinary Banner
+    • 3x Encarmine Spear
+    • 2x Angelus Boltgun
 
