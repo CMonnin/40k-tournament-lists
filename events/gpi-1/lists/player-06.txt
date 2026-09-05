@@ -1,5 +1,0 @@
-Player: Player 6
-Faction: -
-Detachment: -
-Disposition: -
-

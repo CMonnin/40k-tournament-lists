@@ -1,0 +1,61 @@
+Player: Julien
+Faction: Chaos Knights
+Detachment:  Hunting Warpack, Helhunt Lance 
+Disposition: Disruption
+
+hellhunt showdown [2000 points]
+Chaos Knights
+Battle Size: Strike Force (2000 point limit)
+
+Detachments: Hunting Warpack, Helhunt Lance (3/3 Detachment Points)
+Force Disposition: Disruption
+
+Character
+
+  Knight Abominant (395 points)
+    • Warlord
+    • Balemace, Diabolus heavy stubber, Electroscourge and Volkite combustor
+    • Octagram Of Conjuration [+40 points]
+
+  Knight Ruinator (365 points)
+    • Darkflame lance, Fellbore and Terrorpulse missiles
+    • Throne Tyrannicus [+25 points]
+
+Vehicle
+
+  War Dog Brigand (135 points)
+    • Armoured feet, Avenger chaincannon, Daemonbreath spear and Havoc multi-launcher
+
+  War Dog Brigand (135 points)
+    • Armoured feet, Avenger chaincannon, Daemonbreath spear and Havoc multi-launcher
+
+  War Dog Executioner (140 points)
+    • 2 War dog autocannons, Armoured feet and Diabolus heavy stubber
+    • Snarling Rivalry [+10 points]
+
+  War Dog Executioner (140 points)
+    • 2 War dog autocannons, Armoured feet and Diabolus heavy stubber
+    • Snarling Rivalry [+10 points]
+
+  War Dog Executioner (140 points)
+    • 2 War dog autocannons, Armoured feet and Diabolus heavy stubber
+    • Snarling Rivalry [+10 points]
+
+  War Dog Karnivore (145 points)
+    • Havoc multi-launcher, Reaper chaintalon and Slaughterclaw
+
+  War Dog Karnivore (145 points)
+    • Havoc multi-launcher, Reaper chaintalon and Slaughterclaw
+
+  War Dog Stalker (135 points)
+    • Avenger chaincannon, Havoc multi-launcher and Slaughterclaw
+
+Allies: Legiones Daemonica
+
+  Beasts of Nurgle (80 points)
+    • putrid appendages
+
+  Nurglings (45 points)
+    • 3 Nurgling Swarms with diseased claws & teeth
+
+Created with WarOrgan (https://warorgan.com)

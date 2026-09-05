@@ -1,4 +1,4 @@
-Player: Player 9
+Player: Vince
 Faction: -
 Detachment: -
 Disposition: -

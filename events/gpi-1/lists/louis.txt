@@ -1,4 +1,4 @@
-Player: Player 11
+Player: Louis
 Faction: -
 Detachment: -
 Disposition: -

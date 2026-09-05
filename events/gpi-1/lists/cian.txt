@@ -1,4 +1,4 @@
-Player: Player 8
+Player: Cian
 Faction: -
 Detachment: -
 Disposition: -
