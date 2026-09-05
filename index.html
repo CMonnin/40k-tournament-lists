@@ -57,6 +57,16 @@ body{
 }
 .card.empty .disp{color:var(--fg3);border-color:var(--bg3)}
 
+.chd-row{display:flex;align-items:center}
+.chd-row .chd{flex:1;min-width:0}
+.qr{
+  flex-shrink:0;margin:0 14px 0 2px;padding:5px 10px;
+  font-size:11px;font-weight:700;letter-spacing:1.2px;text-decoration:none;
+  color:var(--blue);border:1px solid var(--blue);border-radius:3px;
+  -webkit-tap-highlight-color:transparent;
+}
+.qr:hover,.qr:focus-visible{background:var(--blue);color:var(--bg0h);outline:none}
+
 .chev{flex-shrink:0;color:var(--bg4);font-size:12px;transition:transform .15s}
 .card.open .chev{transform:rotate(90deg);color:var(--accent)}
 .card.empty .chev{visibility:hidden}
@@ -100,6 +110,7 @@ const EVENT = !_req || _req === CURRENT_EVENT.slug
   ? CURRENT_EVENT
   : (PAST_EVENTS.find(e => e.slug === _req) || { slug:_req, name:_req, date:'' });
 
+let BASE = '';
 const out = document.getElementById('out');
 
 function esc(s){
@@ -108,13 +119,14 @@ function esc(s){
 
 // Splits "Player:/Faction:/Detachment:" header lines off the raw paste below them.
 function parseList(raw){
-  const meta = { player:'', faction:'', detachment:'', disposition:'' };
+  const meta = { player:'', faction:'', detachment:'', disposition:'', image:'' };
   const lines = raw.replace(/\r\n?/g, '\n').split('\n');
   let i = 0;
   for (; i < lines.length; i++){
-    const m = lines[i].match(/^\s*(Player|Faction|Detachment|Disposition)\s*:\s*(.*)$/i);
+    const m = lines[i].match(/^\s*(Player|Faction|Detachment|Disposition|Image|QR)\s*:\s*(.*)$/i);
     if (!m) break;
-    meta[m[1].toLowerCase()] = m[2].trim();
+    const key = m[1].toLowerCase();
+    meta[key === 'qr' ? 'image' : key] = m[2].trim();
   }
   const body = lines.slice(i).join('\n').trim();
   return { ...meta, body };
@@ -126,6 +138,15 @@ function dispHtml(l){
   return filled(l.disposition)
     ? '<span class="disp">' + esc(l.disposition.trim()) + '</span>'
     : '';
+}
+
+function qrHtml(l){
+  if (!filled(l.image)) return '';
+  const f = l.image.trim().replace(/^.*[\\/]/, '');   // basename only
+  if (!/^[\w.@ -]+\.(png|jpe?g|gif|webp|svg)$/i.test(f)) return '';
+  return '<a class="qr" href="' + BASE + 'images/' + encodeURIComponent(f) + '"' +
+         ' target="_blank" rel="noopener"' +
+         ' aria-label="Open QR code for ' + esc(l.player || f) + '">QR</a>';
 }
 
 function tagsHtml(l){
@@ -149,14 +170,17 @@ function render(lists){
   out.innerHTML = lists.map((l, idx) => {
     const has = !!l.body;
     return '<div class="card' + (has ? '' : ' empty') + '" id="c' + idx + '">' +
-      '<button class="chd" type="button" data-i="' + idx + '"' + (has ? '' : ' disabled') + '>' +
-        '<span class="who">' +
-          '<span class="name">' + esc(l.player || l.file) + '</span>' +
-          '<span class="tags">' + tagsHtml(l) + '</span>' +
-          dispHtml(l) +
-        '</span>' +
-        '<span class="chev">&#9656;</span>' +
-      '</button>' +
+      '<div class="chd-row">' +
+        '<button class="chd" type="button" data-i="' + idx + '"' + (has ? '' : ' disabled') + '>' +
+          '<span class="who">' +
+            '<span class="name">' + esc(l.player || l.file) + '</span>' +
+            '<span class="tags">' + tagsHtml(l) + '</span>' +
+            dispHtml(l) +
+          '</span>' +
+          '<span class="chev">&#9656;</span>' +
+        '</button>' +
+        qrHtml(l) +
+      '</div>' +
       (has
         ? '<div class="body"><pre>' + esc(l.body) + '</pre></div>'
         : '<div class="status">List not submitted</div>') +
@@ -181,6 +205,7 @@ function render(lists){
 // instant and still works if the venue wifi drops after the page has loaded.
 (async () => {
   const base = 'events/' + EVENT.slug + '/';
+  BASE = base;
   try {
     const res = await fetch(base + 'manifest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('manifest.json returned ' + res.status);

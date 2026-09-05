@@ -2,11 +2,16 @@ Player: Full Name
 Faction: Necrons
 Detachment: Awakened Dynasty
 Disposition: Purge the Foe
+Image: full-name.png
 
 <paste the New Recruit plain-text export here, verbatim>
 
 Notes:
-  - Keep the three header lines exactly as above, then ONE blank line, then the list.
+  - Keep the header lines exactly as above (Player, Faction, Detachment,
+    Disposition are required; Image is optional), then ONE blank line, then the list.
   - Faction / Detachment / Disposition may be "-" until known; the card shows "faction TBC".
   - Leave everything below the blank line empty and the card renders "List not submitted".
+  - "Image:" is OPTIONAL. Omit the line entirely for no QR link.
+    The file must live in ../images/ and be named exactly as written here.
+    "QR:" works as an alias for "Image:".
   - This file is deliberately NOT in manifest.json, so it never shows as a card.
