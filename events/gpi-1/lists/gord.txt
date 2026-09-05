@@ -1,5 +1,91 @@
 Player: Gord
-Faction: -
-Detachment: -
-Disposition: -
+Faction: Necrons
+Detachment: Awakened Dynasty
+Disposition: Take and Hold
+Crusty Crons (1990 points)
+
+Necrons
+Awakened Dynasty (3 Detachment Points)
+Take and Hold
+Strike Force (2000 Point)
+
+
+ATTACHED UNITS
+
+Attached Unit 1
+
+Technomancer (80 points)
+  • 1x Staff of light
+
+Canoptek Wraiths (220 points)
+  • 6x Canoptek Wraiths
+    • 6x Vicious Claws
+
+Attached Unit 2
+
+Skorpekh Lord (95 points)
+  • 1x Enmitic annihilator
+  • 1x Flensing claw
+  • 1x Hyperphase harvester
+
+Skorpekh Destroyers (85 points)
+  • 3x Skorpekh Destroyers
+    • 3x Skorpekh Hyperphase Weapons
+
+Attached Unit 3
+
+Orikan The Diviner (90 points)
+  • 1x Staff of tomorrow
+
+Overlord (90 points)
+  • 1x Voidscythe and resurrection orb
+
+Necron Warriors (190 points)
+  • 20x Necron Warriors
+    • 20x Close Combat Weapon
+    • 20x Gauss Reaper
+
+
+CHARACTER
+
+C’tan Shard of The Nightbringer (360 points)
+  • 1x Gaze of death
+  • 1x Scythe of the nightbringer
+
+The Silent King (420 points)
+  • Warlord
+  • 1x Szarekh
+    • 1x Sceptre of Eternal Glory
+    • 1x Staff of Stars
+    • 1x Weapons of The Final Triarch
+  • 2x Triarchal Menhirs
+    • 2x Annihilator Beam
+    • 2x Armoured Bulk
+
+
+BATTLELINE
+
+Immortals (70 points)
+  • 5x Immortals
+    • 5x Gauss Blaster
+    • 5x Close Combat Weapon
+
+
+OTHER DATASHEETS
+
+Canoptek Reanimator (75 points)
+  • 2x Atomiser beams
+  • 1x Reanimator’s claws
+
+Flayed Ones (55 points)
+  • 5x Flayed Ones
+    • 5x Flayer Claws
+
+Ophydian Destroyers (80 points)
+  • 3x Ophydian Destroyers
+    • 3x Ophydian Hyperphase Weapons
+
+Ophydian Destroyers (80 points)
+  • 3x Ophydian Destroyers
+    • 3x Ophydian Hyperphase Weapons
 

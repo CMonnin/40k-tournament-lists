@@ -1,5 +1,26 @@
 Player: Lancelot
-Faction: -
-Detachment: -
-Disposition: -
+Faction: Sisters of Battle
+Detachment: Penitent Host, Chorus of Condemnation
+Disposition: Purge The Foe
+les soeurs [Adepta Sororitas] - (2000 points)
+Detachments: Penitent Host, Chorus of Condemnation
+Purge The Foe
+
+Arco-flagellants (50 points)
+Castigator (165 points)
+Castigator (165 points)
+Exorcist (190 points)
+Intranzia Fraye (135 points)
+Junith Eruita (105 points)
+Ministorum Priest (70 points)
+Ministorum Priest (50 points)
+Mortifiers (70 points)
+Mortifiers (70 points)
+Penitent Engines (140 points)
+Penitent Engines (140 points)
+Repentia Squad (140 points)
+Repentia Squad (140 points)
+Saint Celestine (150 points)
+Sanctifiers (110 points)
+Sanctifiers (110 points)
 

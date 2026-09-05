@@ -1,5 +1,29 @@
 Player: Jer
-Faction: -
-Detachment: -
-Disposition: -
+Faction: Orks
+Detachment: Green Tide, Runt Swarm and Wreckas |
+Disposition: 
+
+Brother bear list!
+
+Shield the Krump — 1,995 pts
+Orks | Green Tide, Runt Swarm and Wreckas | Strike Force
+
+ATTACHED
+1) Beastboss (85) + Weirdboy (65) + 20x Beast Snagga Boyz (170) [2 Nobs w/ Power Snappa]
+2) Warboss (115) [Ferocious Show-off] + Weirdboy (65) + 20x Boyz (180) [2 Big Shoota, 2 Burna, 2 Rokkit, 2 Nobs w/ Kombi-skorcha]
+3) Big Mek (85) + 10x Flash Gitz (230) [Supa-snazz Dakka]
+4) Big Mek (85) + 10x Flash Gitz (230) [Supa-snazz Dakka]
+
+CHARACTERS
+Ghazghkull Thraka (300) — WARLORD
+
+BATTLELINE
+20x Gretchin (90) [Minefield Detail]
+10x Gretchin (45)
+10x Gretchin (45)
+10x Gretchin (45)
+
+OTHER
+3x Deffkoptas (80)
+3x Deffkoptas (80)
 
