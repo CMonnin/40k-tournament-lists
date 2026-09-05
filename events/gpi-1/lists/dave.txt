@@ -1,5 +1,25 @@
 Player: Dave
-Faction: -
-Detachment: -
-Disposition: -
+Faction: Dark Angels
+Detachment: Company of Hunters, Librarius Conclave
+Disposition: Reconnaissance
+Yonder list:
+CoH Library Lion+Outriders [Dark Angels] - (1990 points)
+Detachments: Company of Hunters, Librarius Conclave
+Reconnaissance
+
+Azrael (140 points)
+Deathwing Knights (240 points)
+Infiltrator Squad (110 points)
+Inner Circle Companions (160 points)
+Inner Circle Companions (160 points)
+Land Speeder (105 points)
+Land Speeder (105 points)
+Land Speeder Vengeance (130 points)
+Librarian (90 points)
+Librarian In Terminator Armour (110 points)
+Lion El’jonson (265 points)
+Outrider Squad (70 points)
+Ravenwing Command Squad (135 points)
+Sammael (105 points)
+Scout Squad (65 points)
 

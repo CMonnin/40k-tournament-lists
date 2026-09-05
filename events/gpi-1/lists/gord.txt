@@ -2,6 +2,7 @@ Player: Gord
 Faction: Necrons
 Detachment: Awakened Dynasty
 Disposition: Take and Hold
+Image: gord.png
 Crusty Crons (1990 points)
 
 Necrons
