@@ -5,6 +5,8 @@ Disposition: Take and Hold
 Image: gord.png
 Crusty Crons (1990 points)
 
+Crusty Crons (1990 points)
+
 Necrons
 Awakened Dynasty (3 Detachment Points)
 Take and Hold
@@ -38,8 +40,9 @@ Attached Unit 3
 Orikan The Diviner (90 points)
   • 1x Staff of tomorrow
 
-Overlord (90 points)
+Overlord (110 points)
   • 1x Voidscythe and resurrection orb
+  • Enhancement: Veil of Darkness
 
 Necron Warriors (190 points)
   • 20x Necron Warriors
@@ -78,6 +81,11 @@ Canoptek Reanimator (75 points)
   • 2x Atomiser beams
   • 1x Reanimator’s claws
 
+Deathmarks (60 points)
+  • 5x Deathmarks
+    • 5x Synaptic Disintegrator
+    • 5x Close Combat Weapon
+
 Flayed Ones (55 points)
   • 5x Flayed Ones
     • 5x Flayer Claws
@@ -85,8 +93,3 @@ Flayed Ones (55 points)
 Ophydian Destroyers (80 points)
   • 3x Ophydian Destroyers
     • 3x Ophydian Hyperphase Weapons
-
-Ophydian Destroyers (80 points)
-  • 3x Ophydian Destroyers
-    • 3x Ophydian Hyperphase Weapons
-
