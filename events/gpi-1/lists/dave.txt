@@ -2,6 +2,7 @@ Player: Dave
 Faction: Dark Angels
 Detachment: Company of Hunters, Librarius Conclave
 Disposition: Reconnaissance
+Image: dave.jpg
 Yonder list:
 CoH Library Lion+Outriders [Dark Angels] - (1990 points)
 Detachments: Company of Hunters, Librarius Conclave

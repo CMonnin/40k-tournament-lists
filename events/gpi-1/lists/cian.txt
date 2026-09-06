@@ -2,6 +2,7 @@ Player: Cian
 Faction: Blood Angels
 Detachment: LAG
 Disposition: Take and Hold
+Image: cian.png
 bad day to be horus 3 (2000 points)
 
 Blood Angels
